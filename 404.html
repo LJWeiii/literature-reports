@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>页面未找到 | 文献追踪</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('literature-theme')||'system';</script>
+  <script defer src="assets/site.js"></script>
+</head>
+<body data-index-url="assets/reports-index.json" data-base="">
+  <a class="skip-link" href="#main-content">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="文献追踪首页">
+      <img src="assets/favicon.svg" alt="" width="30" height="30">
+      <span>文献追踪周报</span>
+    </a>
+    <div class="header-tools">
+      <label class="date-picker">
+        <span>选择日期</span>
+        <select data-report-select aria-label="按日期选择周报">
+        </select>
+      </label>
+      <button class="icon-button mobile-archive-button" type="button" data-archive-toggle title="打开历期周报" aria-label="打开历期周报" aria-expanded="false">☰</button>
+      <button class="icon-button" type="button" data-theme-toggle title="切换浅色或深色模式" aria-label="切换浅色或深色模式">◐</button>
+    </div>
+  </header>
+<main id="main-content" class="not-found">
+  <p class="eyebrow">404</p>
+  <h1>没有找到这份周报</h1>
+  <p>链接可能已变更，或该期报告因结构校验失败而未发布。</p>
+  <a class="text-command" href="index.html">返回最新周报</a>
+</main>
+</body>
+</html>

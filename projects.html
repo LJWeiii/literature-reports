@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>阅读报告库 | 菠萝油王子的武器库</title>
+  <title>我的项目 | 菠萝油王子的武器库</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
   <script>document.documentElement.dataset.theme=localStorage.getItem('literature-theme')||'system';</script>
@@ -19,9 +19,9 @@
         <span class="brand-long">菠萝油王子的武器库</span><span class="brand-short">武器库</span>
       </a>
       <nav class="global-nav" aria-label="一级入口">
-        <a href="projects.html">我的项目</a>
+        <a href="projects.html" aria-current="page">我的项目</a>
         <a href="index.html">文献追踪周报</a>
-        <a href="reading-reports.html" aria-current="page">阅读报告库<span>1</span></a>
+        <a href="reading-reports.html">阅读报告库<span>1</span></a>
       </nav>
     </div>
     <div class="header-tools">
@@ -30,7 +30,7 @@
   </header>
 <nav class="workspace-switcher" aria-label="研究工作台一级入口">
   <div class="workspace-switcher-inner">
-    <a class="workspace-entry" href="projects.html">
+    <a class="workspace-entry is-current" href="projects.html" aria-current="page">
       <span class="workspace-entry-index">01 / PROJECTS</span>
       <strong>我的项目</strong>
       <p>科研项目、仿真与协作入口</p>
@@ -42,37 +42,28 @@
       <p>最新一期 2026-07-10</p>
       <span class="workspace-entry-meta">共 1 期</span>
     </a>
-    <a class="workspace-entry is-current" href="reading-reports.html" aria-current="page">
+    <a class="workspace-entry" href="reading-reports.html">
       <span class="workspace-entry-index">03 / DEEP READING</span>
       <strong>阅读报告库</strong>
       <p>全文精读、补充材料与证据边界</p>
       <span class="workspace-entry-meta">1 份报告</span>
     </a>
   </div>
-</nav><main id="main-content" class="archive-page reading-library-page">
+</nav><main id="main-content" class="archive-page projects-page">
   <header class="page-heading">
-    <p class="eyebrow">READING REPORTS</p>
-    <h1>阅读报告库</h1>
-    <p>管理已发布的论文全文精读。每份报告独立标注主文、补充材料、实验、数值与评述边界。</p>
+    <p class="eyebrow">PROJECTS</p>
+    <h1>我的项目</h1>
+    <p>这里将作为科研项目、数值仿真、数据分析与协作资料的统一入口。</p>
   </header>
-  <div class="reading-filter">
-    <label for="reading-search">筛选阅读报告</label>
-    <input id="reading-search" type="search" autocomplete="off" placeholder="输入论文标题、期刊或关键词" data-reading-search>
-  </div>
-  <div class="reading-library" data-reading-library>
-    <article class="reading-card" data-reading-card data-reading-text="《Photonic arbitrary Chern vectors》精读报告 Photonic arbitrary Chern vectors Science Advances 倾斜三维 Haldane 模型与倾斜磁光晶格如何把单分量陈向量推广为实验性的 C=(1,1,-1)，以及超胞调制为何能进一步构造大整数陈向量。报告区分了实验、数值、拓扑反演与作者外推。">
-      <div class="reading-card-meta">
-        <span>Science Advances</span>
-        <time datetime="2026-07-14">精读于 2026-07-14</time>
-      </div>
-      <h2><a href="reading-reports/photonic-arbitrary-chern-vectors.html">Photonic arbitrary Chern vectors</a></h2>
-      <p>倾斜三维 Haldane 模型与倾斜磁光晶格如何把单分量陈向量推广为实验性的 C=(1,1,-1)，以及超胞调制为何能进一步构造大整数陈向量。报告区分了实验、数值、拓扑反演与作者外推。</p>
-      <div class="reading-card-footer">
-<span>DOI 10.1126/sciadv.aef3784</span>        <a href="reading-reports/photonic-arbitrary-chern-vectors.html">打开阅读报告 →</a>
-      </div>
-    </article>
-  </div>
-  <p class="reading-empty" data-reading-empty hidden>没有匹配的阅读报告。</p>
+  <section class="project-placeholder" aria-labelledby="project-placeholder-title">
+    <span class="project-placeholder-state">RESERVED / 预留</span>
+    <h2 id="project-placeholder-title">项目工作台入口已经预留</h2>
+    <p>当前不接入内部项目文件、仿真数据或账户系统。后续新增项目模块时，可在不改变文献周报与阅读报告发布流程的前提下独立扩展。</p>
+    <div class="project-placeholder-actions">
+      <a href="index.html">进入文献追踪周报</a>
+      <a href="reading-reports.html">进入阅读报告库</a>
+    </div>
+  </section>
 </main>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>文献追踪周报：20260710 | 文献追踪</title>
+  <title>文献追踪周报：20260710 | 菠萝油王子的武器库</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
   <script>document.documentElement.dataset.theme=localStorage.getItem('literature-theme')||'system';</script>
@@ -13,35 +13,49 @@
 <body data-index-url="assets/reports-index.json" data-base="">
   <a class="skip-link" href="#main-content">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="文献追踪首页">
-      <img src="assets/favicon.svg" alt="" width="30" height="30">
-      <span>文献追踪周报</span>
-    </a>
+    <div class="header-primary">
+      <a class="brand" href="index.html" aria-label="菠萝油王子的武器库首页">
+        <img src="assets/favicon.svg" alt="" width="30" height="30">
+        <span class="brand-long">菠萝油王子的武器库</span><span class="brand-short">武器库</span>
+      </a>
+      <nav class="global-nav" aria-label="一级入口">
+        <a href="projects.html">我的项目</a>
+        <a href="index.html" aria-current="page">文献追踪周报</a>
+        <a href="reading-reports.html">阅读报告库<span>1</span></a>
+      </nav>
+    </div>
     <div class="header-tools">
-      <a class="header-link" href="reading-reports.html">阅读报告<span>1</span></a>
       <label class="date-picker">
         <span>选择日期</span>
         <select data-report-select aria-label="按日期选择周报">
           <option value="reports/20260710.html" selected>2026-07-10</option>
         </select>
       </label>
-      <button class="icon-button mobile-archive-button" type="button" data-archive-toggle title="打开历期周报" aria-label="打开历期周报" aria-expanded="false">☰</button>
-      <button class="icon-button" type="button" data-theme-toggle title="切换浅色或深色模式" aria-label="切换浅色或深色模式">◐</button>
+<button class="utility-button mobile-archive-button" type="button" data-archive-toggle title="打开历期周报" aria-label="打开历期周报" aria-expanded="false">历期</button>      <button class="utility-button" type="button" data-theme-toggle title="切换浅色或深色模式" aria-label="切换浅色或深色模式">主题</button>
     </div>
   </header>
-<aside class="reading-entry" aria-label="阅读报告入口">
-  <div>
-    <span class="eyebrow">DEEP READING</span>
-    <strong>阅读报告库</strong>
-    <p>集中浏览已上传的全文精读、补充材料核查与证据边界分析。</p>
+<nav class="workspace-switcher" aria-label="研究工作台一级入口">
+  <div class="workspace-switcher-inner">
+    <a class="workspace-entry" href="projects.html">
+      <span class="workspace-entry-index">01 / PROJECTS</span>
+      <strong>我的项目</strong>
+      <p>科研项目、仿真与协作入口</p>
+      <span class="workspace-entry-meta">预留入口</span>
+    </a>
+    <a class="workspace-entry is-current" href="index.html" aria-current="page">
+      <span class="workspace-entry-index">02 / WEEKLY</span>
+      <strong>文献追踪周报</strong>
+      <p>最新一期 2026-07-10</p>
+      <span class="workspace-entry-meta">共 1 期</span>
+    </a>
+    <a class="workspace-entry" href="reading-reports.html">
+      <span class="workspace-entry-index">03 / DEEP READING</span>
+      <strong>阅读报告库</strong>
+      <p>全文精读、补充材料与证据边界</p>
+      <span class="workspace-entry-meta">1 份报告</span>
+    </a>
   </div>
-  <div class="reading-entry-latest">
-    <span>最新</span>
-    <a href="reading-reports/photonic-arbitrary-chern-vectors.html">Photonic arbitrary Chern vectors</a>
-  </div>
-  <a class="reading-entry-command" href="reading-reports.html">管理全部 1 份报告</a>
-</aside>
-<div class="search-bar" role="search">
+</nav><div class="search-bar" role="search">
   <label for="site-search">搜索历期标题与正文</label>
   <input id="site-search" type="search" autocomplete="off" placeholder="输入论文标题、主题或关键词" data-site-search>
   <div class="search-results" data-search-results hidden aria-live="polite"></div>

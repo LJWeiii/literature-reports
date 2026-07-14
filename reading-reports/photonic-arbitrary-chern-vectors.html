@@ -8,7 +8,7 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/site.css">
   <script>document.documentElement.dataset.theme=localStorage.getItem('literature-theme')||'system';</script>
-  <script>window.MathJax={tex:{inlineMath:{'[+]':[['$','$']]}}};</script>
+  <script>const mathjaxFontRoot=new URL('../assets/mathjax/newcm',document.baseURI).href;window.MathJax={loader:{paths:{'mathjax-newcm':mathjaxFontRoot}},tex:{inlineMath:{'[+]':[['$','$']]}},chtml:{fontURL:mathjaxFontRoot+'/chtml/woff2',dynamicPrefix:'[mathjax-newcm]/chtml/dynamic'},options:{enableSpeech:false,enableBraille:false,a11y:{speech:false,braille:false},menuOptions:{settings:{speech:false,braille:false}}}};</script>
   <script defer src="../assets/mathjax/tex-chtml.js"></script>
   <script defer src="../assets/site.js"></script>
 </head>

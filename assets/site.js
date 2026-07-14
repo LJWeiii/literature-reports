@@ -50,6 +50,69 @@
     if (readingEmpty) readingEmpty.hidden = visible !== 0;
   });
 
+  const mobileTocButton = document.querySelector('[data-mobile-toc-toggle]');
+  const mobileTocLayer = document.querySelector('[data-mobile-toc-layer]');
+  const mobileTocPanel = mobileTocLayer?.querySelector('.mobile-toc-panel');
+  let mobileTocHistoryEntry = false;
+  let pendingMobileTocHref = '';
+
+  function hideMobileToc() {
+    if (!mobileTocButton || !mobileTocLayer || mobileTocLayer.hidden) return;
+    mobileTocLayer.hidden = true;
+    mobileTocButton.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('mobile-toc-open');
+    mobileTocButton.focus();
+  }
+
+  function closeMobileToc() {
+    if (!mobileTocLayer || mobileTocLayer.hidden) return;
+    if (mobileTocHistoryEntry) {
+      mobileTocHistoryEntry = false;
+      history.back();
+      return;
+    }
+    hideMobileToc();
+  }
+
+  mobileTocButton?.addEventListener('click', () => {
+    if (!mobileTocLayer) return;
+    mobileTocLayer.hidden = false;
+    mobileTocButton.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('mobile-toc-open');
+    history.pushState({ mobileTocOpen: true }, '', window.location.href);
+    mobileTocHistoryEntry = true;
+    mobileTocPanel?.focus();
+  });
+
+  mobileTocLayer?.addEventListener('click', (event) => {
+    const tocLink = event.target.closest('.mobile-toc-panel a');
+    if (tocLink) {
+      event.preventDefault();
+      pendingMobileTocHref = tocLink.getAttribute('href') || '';
+      closeMobileToc();
+    } else if (event.target.closest('[data-mobile-toc-close]')) {
+      closeMobileToc();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMobileToc();
+  });
+
+  window.addEventListener('popstate', () => {
+    if (!mobileTocLayer || mobileTocLayer.hidden) return;
+    mobileTocHistoryEntry = false;
+    hideMobileToc();
+    if (pendingMobileTocHref) {
+      const href = pendingMobileTocHref;
+      pendingMobileTocHref = '';
+      window.location.hash = href;
+      window.requestAnimationFrame(() => {
+        document.getElementById(href.slice(1))?.scrollIntoView({ block: 'start' });
+      });
+    }
+  });
+
   if (!input || !results) return;
 
   let reports = [];

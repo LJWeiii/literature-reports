@@ -35,6 +35,21 @@
 
   const input = document.querySelector('[data-site-search]');
   const results = document.querySelector('[data-search-results]');
+  const readingInput = document.querySelector('[data-reading-search]');
+  const readingCards = Array.from(document.querySelectorAll('[data-reading-card]'));
+  const readingEmpty = document.querySelector('[data-reading-empty]');
+
+  readingInput?.addEventListener('input', () => {
+    const query = readingInput.value.trim().toLocaleLowerCase();
+    let visible = 0;
+    readingCards.forEach((card) => {
+      const matched = !query || (card.dataset.readingText || '').toLocaleLowerCase().includes(query);
+      card.hidden = !matched;
+      if (matched) visible += 1;
+    });
+    if (readingEmpty) readingEmpty.hidden = visible !== 0;
+  });
+
   if (!input || !results) return;
 
   let reports = [];

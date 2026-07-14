@@ -308,8 +308,8 @@ button, input, select { font: inherit; }
   .site-header { grid-template-columns: minmax(0, 1fr) auto; gap: 7px 8px; padding: 8px 12px 9px; }
   .header-primary { display: contents; }
   .brand { grid-column: 1; grid-row: 1; gap: 7px; }
-  .brand-long { display: none; }
-  .brand-short { display: inline; font-size: 13px; }
+  .brand-long { display: inline; font-size: 13px; }
+  .brand-short { display: none; }
   .global-nav { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
   .global-nav a { justify-content: center; min-width: 0; padding: 6px 4px; overflow: hidden; font-size: 11px; text-overflow: ellipsis; }
   .global-nav a span { display: none; }
@@ -318,6 +318,11 @@ button, input, select { font: inherit; }
   .date-picker select { min-width: 108px; max-width: 31vw; padding-right: 24px; }
   .utility-button { min-width: 40px; height: 36px; padding: 0 7px; font-size: 11px; }
   .mobile-archive-button { display: inline-block; }
+  .section-weekly { --header-height: 136px; }
+  .section-weekly .site-header { grid-template-columns: minmax(0, 1fr); }
+  .section-weekly .brand { grid-column: 1; grid-row: 1; }
+  .section-weekly .header-tools { grid-column: 1; grid-row: 2; justify-content: flex-end; }
+  .section-weekly .global-nav { grid-column: 1; grid-row: 3; }
   .workspace-switcher { margin: 12px auto 2px; padding: 0 12px; }
   .workspace-switcher-inner { gap: 6px; }
   .workspace-entry { display: flex; min-height: 90px; padding: 10px 9px; flex-direction: column; gap: 2px; }
